@@ -16,6 +16,12 @@ app.get("/", (req, res) => {
   res.status(200).json(`This is OUR root route`);
 });
 
+app.get(`/movies`, async function (req, res) {
+  const result = db.query(`SELECT * FROM movieData`);
+  res.json(result.rows);
+  console.log(result);
+});
+
 app.listen(7878, () => {
   console.log(`server running on http://localhost:7878`);
 });
