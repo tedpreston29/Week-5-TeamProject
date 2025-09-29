@@ -9,14 +9,13 @@ dotenv.config();
 app.use(cors());
 
 const db = new pg.Pool({
-    conntectionString: process.env.
-})
+  conntectionString: process.env.DB_CONN_STRING,
+});
 
+app.get("/", (req, res) => {
+  res.status(200).json(`This is OUR root route`);
+});
 
-app.get('/', (req, res) => {
-    res.status(200).json(`This is OUR root route`)
-})
-
-app.listen(7878, ()=> {
-    console.log(`server running on http://localhost:7878`)
-})
+app.listen(7878, () => {
+  console.log(`server running on http://localhost:7878`);
+});
