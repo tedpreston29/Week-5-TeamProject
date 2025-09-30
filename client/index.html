@@ -6,9 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/style.css" />
     <script type="module" src="/src/main.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
     <title>client</title>
   </head>
   <body>
+    <header>
+      <!-- src to logo here? -->
+      <!-- Nav Bar Colour: #132125 -->
+      <!-- Backgroun Colour #181D21 -->
+      <nav>
+        <a href="#movieMoodMatcher">MOODS</a>
+        <a href="#movieReviews">REVIEWS</a>
+      </nav>
+    </header>
+
+    <main>
+      <div>
+        <button id="happy" class="happyMood">HAPPY</button>
+        <button id="sad" class="sadMood">SAD</button>
+        <button id="adventurous" class="adventurousMood">ADVENTUROUS</button>
+        <button id="frightening" class="frightenedMood">FRIGHTENING</button>
+        <button id="thrilling" class="thrillingMood">THRILLING</button>
+      </div>
+      <div id="mainDisplay" class="mainDisplay" />
+      <!-- Button Colours #F5DD02 (YELLOW) #00DDFF (BLUE) -->
+      <div>
+        <span class="material-symbols-outlined"> thumb_up </span>
+        <span class="material-symbols-outlined"> thumb_down </span>
+      </div>
+    </main>
+    <footer></footer>
     <div id="app"></div>
   </body>
 </html>
