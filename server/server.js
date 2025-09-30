@@ -9,7 +9,7 @@ dotenv.config();
 app.use(cors());
 
 const db = new pg.Pool({
-  conntectionString: process.env.DB_CONN_STRING,
+  connectionString: process.env.DB_CONN_STRING,
 });
 
 app.get("/", (req, res) => {
@@ -17,9 +17,8 @@ app.get("/", (req, res) => {
 });
 
 app.get(`/movies`, async function (req, res) {
-  const result = db.query(`SELECT * FROM movieData`);
+  const result = await db.query(`SELECT * FROM movieData`);
   res.json(result.rows);
-  console.log(result);
 });
 
 app.listen(7878, () => {
