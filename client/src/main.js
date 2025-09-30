@@ -1,11 +1,11 @@
-
 const buttonMoodHappy = document.getElementById(`happy`);
 const buttonMoodSad = document.getElementById(`sad`);
 const buttonMoodAdven = document.getElementById(`adventurous`);
 const buttonMoodFright = document.getElementById(`frightening`);
 const buttonMoodThrill = document.getElementById(`thrilling`);
+const reviewForm = document.getElementById(`reviewForm`);
 
-const moodContainer = document.getElementById(`mainDisplay`); 
+const moodContainer = document.getElementById(`mainDisplay`);
 
 async function getMoodData() {
   const getData = await fetch();
@@ -13,6 +13,18 @@ async function getMoodData() {
   console.log(getData);
 }
 
-function generateHTML
+// function generateHTML
 
+reviewForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const data = new FormData(reviewForm);
+  const dataCreated = Object.fromEntreies(data);
 
+  const sendData = await fetch(`http://localhost:7878/reviews`, {
+    headers: {
+      "content-Type": "application/json",
+    },
+    method: "POST",
+    body: JSON.stringify(reviewSubmitted),
+  });
+});
