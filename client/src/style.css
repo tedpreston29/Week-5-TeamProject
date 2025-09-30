@@ -8,4 +8,42 @@
 body {
   background-color: #181d21;
   color: white;
+  font-family: monospace;
+}
+
+#navBar {
+  background-color: #15161b;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding-right: 50px;
+  align-items: center;
+  gap: 45px;
+  height: 60px;
+  font-size: 30px;
+}
+
+#navBar a {
+  text-decoration: none;
+  color: #f5dd02;
+}
+#mainDisplay {
+}
+
+#moodButtons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 2%;
+  grid-row-gap: 0px;
+  height: 60px;
+  max-width: 100vw;
+  margin-top: 2%;
+  margin-left: 18px;
+  margin-right: 18px;
+}
+
+#moodButtons > button {
+  width: 100%;
+  height: 100%;
 }
