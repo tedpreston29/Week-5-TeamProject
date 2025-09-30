@@ -28,7 +28,13 @@ app.get(`/reviews`, async function (req, res) {
 
 app.post(`/reviews`, async function (req, res) {
   const requestFromClient = req.body;
-  console.log(requestFromClient);
+
+  const sendToDatabase = db.query(
+    `INSERT INTO reviewData (movieName, review) VALUES ($1, $2)`,
+    [req.body.movieName, req.body.review]
+  );
+
+  res.json({ message: `Your review has been Submitted` });
 });
 
 app.listen(7878, () => {
