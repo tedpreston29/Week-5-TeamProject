@@ -1,3 +1,4 @@
+
 const buttonMoodHappy = document.getElementById(`happy`);
 const buttonMoodSad = document.getElementById(`sad`);
 const buttonMoodAdven = document.getElementById(`adventurous`);
