@@ -17,7 +17,7 @@
       <!-- src to logo here? -->
       <!-- Nav Bar Colour: #132125 -->
       <!-- Backgroun Colour #181D21 -->
-      <nav>
+      <nav id="navBar">
         <a href="#movieMoodMatcher">MOODS</a>
         <a href="#movieReviews">REVIEWS</a>
       </nav>
@@ -25,16 +25,15 @@
 
     <main>
       <section id="mainDisplay">
-        <div>
+        <div id="moodButtons">
           <button id="happy" class="happyMood">HAPPY</button>
           <button id="sad" class="sadMood">SAD</button>
           <button id="adventurous" class="adventurousMood">ADVENTUROUS</button>
           <button id="frightening" class="frightenedMood">FRIGHTENING</button>
           <button id="thrilling" class="thrillingMood">THRILLING</button>
         </div>
-        <div id="mainDisplay" class="mainDisplay" />
         <!-- Button Colours #F5DD02 (YELLOW) #00DDFF (BLUE) -->
-        <div>
+        <div id="thumbsUp/Down">
           <span class="material-symbols-outlined"> thumb_up </span>
           <span class="material-symbols-outlined"> thumb_down </span>
         </div>
@@ -56,7 +55,11 @@
           </select>
         
           <label for="reviewBox">Make a Reivew:</label>
+
+         
+
           <input type="text" id="reviewBox" name="review" required>
+
 
           <button type="submit">Submit Review:</button>
       </section>
