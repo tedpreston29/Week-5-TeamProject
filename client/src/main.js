@@ -31,7 +31,20 @@ buttonMoodThrill.addEventListener(`click`, function () {
 async function fetchMovieMood(mood) {
   const getMood = await fetch(`http://localhost:7878/movieMood?mood=${mood}`);
   const gotMood = await getMood.json();
+  generateMoodImage(gotMood);
+
   console.log(gotMood);
+}
+
+function generateMoodImage(images) {
+  imageDisplay.innerHTML = "";
+
+  images.forEach(function (item) {
+    const moodImg = document.createElement(`img`);
+    moodImg.src = item.imgsrc;
+    moodImg.setAttribute(`class`, `moodImages`);
+    imageDisplay.append(moodImg);
+  });
 }
 
 reviewForm.addEventListener("submit", async (event) => {
