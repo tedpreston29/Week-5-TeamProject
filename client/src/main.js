@@ -8,13 +8,31 @@ const moodContainer = document.getElementById(`mainDisplay`);
 const reviewDisplay = document.getElementById(`reviewDisplay`);
 const imageDisplay = document.getElementById("movieImgContainer");
 
-async function getMoodData() {
-  const getData = await fetch();
+buttonMoodHappy.addEventListener(`click`, async function () {
+  fetchMovieMood(`happy`);
+});
 
-  console.log(getData);
+buttonMoodSad.addEventListener(`click`, function () {
+  fetchMovieMood(`sad`);
+});
+
+buttonMoodAdven.addEventListener(`click`, function () {
+  fetchMovieMood(`adventurous`);
+});
+
+buttonMoodFright.addEventListener(`click`, function () {
+  fetchMovieMood(`frightening`);
+});
+
+buttonMoodThrill.addEventListener(`click`, function () {
+  fetchMovieMood(`thrilling`);
+});
+
+async function fetchMovieMood(mood) {
+  const getMood = await fetch(`http://localhost:7878/movieMood?mood=${mood}`);
+  const gotMood = await getMood.json();
+  console.log(gotMood);
 }
-
-// function generateHTML
 
 reviewForm.addEventListener("submit", async (event) => {
   event.preventDefault();

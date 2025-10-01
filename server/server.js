@@ -1,4 +1,4 @@
-import express from "express";
+import express, { request } from "express";
 import cors from "cors";
 import pg from "pg";
 import dotenv from "dotenv";
@@ -19,6 +19,13 @@ app.get("/", (req, res) => {
 app.get(`/movies`, async function (req, res) {
   const result = await db.query(`SELECT * FROM movieData`);
   res.json(result.rows);
+});
+
+app.get(`/movieMood`, async function (req, res) {
+  const getMovie = await db.query(`SELECT * FROM movieData WHERE mood = $1`, [
+    req.query.mood,
+  ]);
+  res.json(getMovie.rows);
 });
 
 app.get(`/reviews`, async function (req, res) {
