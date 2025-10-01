@@ -45,7 +45,7 @@ function addReviews(reviewsArray) {
     console.log(reviewObject);
 
     const filmName = document.createElement("p");
-    filmName.innerText = reviewObject.movieName;
+    filmName.innerText = reviewObject.moviename;
 
     const movieReview = document.createElement("p");
     movieReview.innerText = reviewObject.review;
