@@ -14,9 +14,6 @@
   </head>
   <body>
     <header>
-      <!-- src to logo here? -->
-      <!-- Nav Bar Colour: #132125 -->
-      <!-- Backgroun Colour #181D21 -->
       <nav id="navBar">
         <a href="#movieMoodMatcher">MOODS</a>
         <a href="#movieReviews">REVIEWS</a>
@@ -35,15 +32,17 @@
         <div id="movieImgContainer"></div>
         <div id="thumbsUp/Down">
           <span class="material-symbols-outlined"> thumb_up </span>
+          <span id="ratingPositive"></span>
           <span class="material-symbols-outlined"> thumb_down </span>
+          <span id="ratingNegative"></span>
         </div>
       </section>
       <section>
         <div id="reviewDisplay"></div>
       </section>
-      <section>
-        <form id="reviewform">
-          <label for="movieList">Select a Movie:</label>
+      <section id="userSubmissionsContainer">
+        <form id="reviewform"
+          <label for="movieList">Select a Movie:<label>
           <select name="movieName" id="movieList">
             <option value="The Lego Movie">The Lego Movie</option>
             <option value="Paddington 2">Paddington 2</option>
@@ -57,7 +56,7 @@
             <option value="Se7en">Se7en</option>
           </select>
           <label for="reviewBox">Make a Reivew:</label>
-          <input type="text" id="reviewBox" name="review" required>
+          <input type="text" id="reviewBox" name="review" placeholder="Your Review Here" required>
           <button type="submit">Submit Review:</button>
       </section>
     </main>
