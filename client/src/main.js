@@ -4,8 +4,9 @@ const buttonMoodAdven = document.getElementById(`adventurous`);
 const buttonMoodFright = document.getElementById(`frightening`);
 const buttonMoodThrill = document.getElementById(`thrilling`);
 const reviewForm = document.getElementById(`reviewform`);
-console.log(reviewForm);
 const moodContainer = document.getElementById(`mainDisplay`);
+const reviewDisplay = document.getElementById(`reviewDisplay`);
+const imageDisplay = document.getElementById("movieImgContainer");
 
 async function getMoodData() {
   const getData = await fetch();
@@ -34,9 +35,23 @@ async function getReviews() {
   const getReview = await fetch(`http://localhost:7878/reviews`);
   const gotReview = await getReview.json();
   console.log(gotReview);
-  //generateReviewHTML(gotReview);
+  addReviews(gotReview);
 }
 
-getReviews();
+function addReviews(reviewsArray) {
+  reviewsArray.forEach((reviewObject) => {
+    const div = document.createElement("div");
+    div.classList.add("review-container");
+    console.log(reviewObject);
 
-// function generateReviewHTML()
+    const filmName = document.createElement("p");
+    filmName.innerText = reviewObject.movieName;
+
+    const movieReview = document.createElement("p");
+    movieReview.innerText = reviewObject.review;
+
+    div.append(filmName, movieReview);
+    reviewDisplay.append(div);
+  });
+}
+getReviews();

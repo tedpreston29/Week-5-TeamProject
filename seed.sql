@@ -9,20 +9,22 @@ CREATE TABLE movieData (
 );
 
 INSERT INTO movieData (filmName, mood, imgSrc, ratingPostive, ratingNegative) VALUES
-('The Lego Movie', 'happy', 'https://via.placeholder.com/150?text=Lego+Movie', 95, 5),
-('Paddington 2', 'happy', 'https://via.placeholder.com/150?text=Paddington+2', 98, 2),
+('The Lego Movie', 'happy', 'https://image.tmdb.org/t/p/w500/4V9WO0dGR6hh2O0i1XKdP1j5Sdf.jpg', 95, 5),
+('Paddington 2', 'happy', 'https://image.tmdb.org/t/p/w500/q6K0QF1P0QpI6s2xO4o7S8B8QzU.jpg', 98, 2),
 
-('The Green Mile', 'sad', 'https://via.placeholder.com/150?text=Green+Mile', 90, 10),
-('Schindler''s List', 'sad', 'https://via.placeholder.com/150?text=Schindlers+List', 97, 3),
+('The Green Mile', 'sad', 'https://image.tmdb.org/t/p/w500/velWPhVMQeQKcxggNEU8YmIo52R.jpg', 90, 10),
+('Schindler''s List', 'sad', 'https://image.tmdb.org/t/p/w500/c8Ass7acuOe4za6DhSattE359gr.jpg', 97, 3),
 
-('Indiana Jones: Raiders of the Lost Ark', 'adventurous', 'https://via.placeholder.com/150?text=Indiana+Jones', 94, 6),
-('The Lord of the Rings: The Fellowship of the Ring', 'adventurous', 'https://via.placeholder.com/150?text=LOTR+Fellowship', 96, 4),
+('Indiana Jones: Raiders of the Lost Ark', 'adventurous', 'https://image.tmdb.org/t/p/w500/mqsy3GJeXZ7w3U2bA3gnN7K3Abc.jpg', 94, 6),
+('The Lord of the Rings: The Fellowship of the Ring', 'adventurous', 'https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg', 96, 4),
 
-('The Conjuring', 'frightening', 'https://via.placeholder.com/150?text=Conjuring', 85, 15),
-('A Nightmare on Elm Street', 'frightening', 'https://via.placeholder.com/150?text=Elm+Street', 80, 20),
+('The Conjuring', 'frightening', 'https://image.tmdb.org/t/p/w500/4z7z9FtrzKuG5qjcG5K9H7XgD5v.jpg', 85, 15),
+('A Nightmare on Elm Street', 'frightening', 'https://image.tmdb.org/t/p/w500/9XTcJzq7dt0dcxK8MKVmj3F76bF.jpg', 80, 20),
 
-('Inception', 'thrilling', 'https://via.placeholder.com/150?text=Inception', 92, 8),
-('Se7en', 'thrilling', 'https://via.placeholder.com/150?text=Se7en', 89, 11);
+('Inception', 'thrilling', 'https://image.tmdb.org/t/p/w500/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg', 92, 8),
+('Se7en', 'thrilling', 'https://image.tmdb.org/t/p/w500/69Sns8WoET6CfaYlIkHbla4l7nC.jpg', 89, 11);
+
+
 SELECT * FROM movieData
 
 CREATE TABLE reviewData (
