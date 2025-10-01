@@ -48,7 +48,7 @@ body {
 .Mood {
   background-color: transparent;
   color: white;
-  font-family: monospace
+  font-family: monospace;
   font-size: 1rem;
   cursor: pointer;
   border: 1px solid black;
@@ -92,4 +92,40 @@ body {
   font-weight: bold;
   font-size: 1.1rem;
   text-decoration: underline;
+}
+
+#userSubmissionsContainer {
+  background-color: #142431;
+  border-top: 2px solid;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  justify-content: center;
+  height: 15%;
+}
+
+#reviewform.formInner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  width: 100%;
+}
+
+#reviewform select {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #15161b;
+  color: white;
+}
+#reviewform input {
+  background-color: #15161b;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+}
+#reviewform button {
+  width: 100%;
+  box-sizing: border-box;
 }
