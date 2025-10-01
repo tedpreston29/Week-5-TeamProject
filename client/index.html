@@ -26,17 +26,20 @@
     <main>
       <section id="mainDisplay">
         <div id="moodButtons">
-          <button id="happy" class="happyMood">HAPPY</button>
-          <button id="sad" class="sadMood">SAD</button>
-          <button id="adventurous" class="adventurousMood">ADVENTUROUS</button>
-          <button id="frightening" class="frightenedMood">FRIGHTENING</button>
-          <button id="thrilling" class="thrillingMood">THRILLING</button>
+          <button id="happy" class="happy Mood">HAPPY</button>
+          <button id="sad" class="sad Mood">SAD</button>
+          <button id="adventurous" class="adventurous Mood">ADVENTUROUS</button>
+          <button id="frightening" class="frightened Mood">FRIGHTENING</button>
+          <button id="thrilling" class="thrilling Mood">THRILLING</button>
         </div>
-        <!-- Button Colours #F5DD02 (YELLOW) #00DDFF (BLUE) -->
+        <div id="movieImgContainer"></div>
         <div id="thumbsUp/Down">
           <span class="material-symbols-outlined"> thumb_up </span>
           <span class="material-symbols-outlined"> thumb_down </span>
         </div>
+      </section>
+      <section>
+        <div id="reviewDisplay"></div>
       </section>
       <section>
         <form id="reviewform">
@@ -53,14 +56,8 @@
             <option value="Inception">Inception</option>
             <option value="Se7en">Se7en</option>
           </select>
-        
           <label for="reviewBox">Make a Reivew:</label>
-
-         
-
           <input type="text" id="reviewBox" name="review" required>
-
-
           <button type="submit">Submit Review:</button>
       </section>
     </main>
