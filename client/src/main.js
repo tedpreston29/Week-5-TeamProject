@@ -29,3 +29,14 @@ reviewForm.addEventListener("submit", async (event) => {
     body: JSON.stringify(dataCreated),
   });
 });
+
+async function getReviews() {
+  const getReview = await fetch(`http://localhost:7878/reviews`);
+  const gotReview = await getReview.json();
+  console.log(gotReview);
+  //generateReviewHTML(gotReview);
+}
+
+getReviews();
+
+// function generateReviewHTML()
