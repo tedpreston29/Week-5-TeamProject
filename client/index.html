@@ -15,8 +15,8 @@
   <body>
     <header>
       <nav id="navBar">
-        <a href="#movieMoodMatcher">MOODS</a>
-        <a href="#movieReviews">REVIEWS</a>
+        
+        <a href="#reviewform">GO TO REVIEWS</a>
       </nav>
     </header>
 
@@ -35,7 +35,7 @@
         <div id="reviewDisplay"></div>
       </section>
       <section id="userSubmissionsContainer">
-        <form id="reviewform"
+        <form id="reviewform">
           <label for="movieList">Select a Movie:<label>
           <select name="movieName" id="movieList">
             <option value="The Lego Movie">The Lego Movie</option>
@@ -52,6 +52,7 @@
           <label for="reviewBox">Make a Reivew:</label>
           <input type="text" id="reviewBox" name="review" placeholder="Your Review Here" required>
           <button type="submit">Submit Review:</button>
+        </form>
       </section>
     </main>
     <footer></footer>
