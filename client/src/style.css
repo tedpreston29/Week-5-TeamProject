@@ -3,6 +3,7 @@
   margin: 0px;
   padding: 0px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -70,6 +71,19 @@ body {
   background-color: purple;
 }
 
+#movieImgContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5px;
+  gap: 5px;
+  max-width: 100%;
+}
+#movieImgContainer img {
+  width: 200px;
+  height: auto;
+}
+
 #reviewDisplay {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -80,7 +94,7 @@ body {
 }
 
 .review-container {
-  border: 2px solid white;
+  border: 3px solid rgb(0, 0, 0);
   background-color: #15161b;
   box-shadow: 0 2px px rgba(127, 135, 173, 0.733);
 }
@@ -92,17 +106,18 @@ body {
   font-weight: bold;
   font-size: 1.1rem;
   text-decoration: underline;
+  color: #f5dd02;
 }
 
 #userSubmissionsContainer {
   background-color: #142431;
-  border-top: 2px solid;
-  padding: 15px;
-  position: fixed;
+  border-top: 2px solid black;
+  padding: 20px;
+  position: sticky;
   width: 100%;
   bottom: 0;
   justify-content: center;
-  height: 15%;
+  height: 15rem;
 }
 
 #reviewform.formInner {
@@ -117,15 +132,39 @@ body {
   width: 100%;
   box-sizing: border-box;
   background-color: #15161b;
-  color: white;
+  color: #f5dd02;
 }
 #reviewform input {
   background-color: #15161b;
   width: 100%;
   box-sizing: border-box;
   color: white;
+  height: 5rem;
 }
 #reviewform button {
   width: 100%;
   box-sizing: border-box;
+  height: 30px;
+  background-color: #f5dd02;
+}
+#reviewform button:hover {
+  background-color: #cab604;
+}
+
+@media (min-width: 1200px) {
+  #movieImgContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+  }
+  #movieImgContainer img {
+    width: 450px;
+  }
+  #reviewform button {
+    width: 100%;
+    box-sizing: border-box;
+    height: 35px;
+  }
 }
