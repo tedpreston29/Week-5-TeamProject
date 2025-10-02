@@ -79,9 +79,17 @@ body {
   gap: 5px;
   max-width: 100%;
 }
-#movieImgContainer img {
-  width: 200px;
+.moodImages {
   height: auto;
+}
+
+.rating-container .thumbs-up {
+  background-color: #cab604;
+  border-radius: 15px;
+}
+.rating-container .thumbs-down {
+  background-color: #ca0404;
+  border-radius: 15px;
 }
 
 #reviewDisplay {
@@ -158,9 +166,6 @@ body {
     justify-content: center;
     margin-top: 20px;
     gap: 15px;
-  }
-  #movieImgContainer img {
-    width: 450px;
   }
   #reviewform button {
     width: 100%;
