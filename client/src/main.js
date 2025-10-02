@@ -43,7 +43,32 @@ function generateMoodImage(images) {
     const moodImg = document.createElement(`img`);
     moodImg.src = item.imgsrc;
     moodImg.setAttribute(`class`, `moodImages`);
-    imageDisplay.append(moodImg);
+
+    const ratingContainer = document.createElement(`div`);
+    ratingContainer.classList.add(`rating-container`);
+    const thumbsUp = document.createElement(`img`);
+    thumbsUp.src = "./public/Thumb_Up.png";
+    thumbsUp.classList.add(`thumbs-up`);
+
+    const ratingPostiveNum = document.createElement(`span`);
+    ratingPostiveNum.innerText = item.ratingpostive;
+
+    const thumbsDown = document.createElement(`img`);
+    thumbsDown.src = "./public/Thumb_Down.png";
+    thumbsDown.classList.add(`thumbs-down`);
+
+    const ratingNegNum = document.createElement(`span`);
+    ratingNegNum.innerText = item.ratingnegative;
+
+    //appending DOM elements
+    imageDisplay.append(moodImg, ratingContainer);
+    ratingContainer.append(
+      thumbsUp,
+      ratingPostiveNum,
+      thumbsDown,
+      ratingNegNum
+    );
+    console.log(item);
   });
 }
 
