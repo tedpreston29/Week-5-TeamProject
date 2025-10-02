@@ -52,14 +52,14 @@ function generateMoodImage(images) {
     const ratingContainer = document.createElement(`div`);
     ratingContainer.classList.add(`rating-container`);
     const thumbsUp = document.createElement(`img`);
-    thumbsUp.src = "./public/Thumb_Up.png";
+    thumbsUp.src = "/Thumb_Up.png";
     thumbsUp.classList.add(`thumbs-up`);
 
     const ratingPostiveNum = document.createElement(`span`);
     ratingPostiveNum.innerText = item.ratingpostive;
 
     const thumbsDown = document.createElement(`img`);
-    thumbsDown.src = "./public/Thumb_Down.png";
+    thumbsDown.src = "/Thumb_Down.png";
     thumbsDown.classList.add(`thumbs-down`);
 
     const ratingNegNum = document.createElement(`span`);
