@@ -40,6 +40,11 @@ function generateMoodImage(images) {
   imageDisplay.innerHTML = "";
 
   images.forEach(function (item) {
+    const imageContainer = document.createElement(`div`);
+    imageContainer.classList.add(`movie-container`);
+
+    imageDisplay.append(imageContainer);
+
     const moodImg = document.createElement(`img`);
     moodImg.src = item.imgsrc;
     moodImg.setAttribute(`class`, `moodImages`);
@@ -61,7 +66,7 @@ function generateMoodImage(images) {
     ratingNegNum.innerText = item.ratingnegative;
 
     //appending DOM elements
-    imageDisplay.append(moodImg, ratingContainer);
+    imageContainer.append(moodImg, ratingContainer);
     ratingContainer.append(
       thumbsUp,
       ratingPostiveNum,
