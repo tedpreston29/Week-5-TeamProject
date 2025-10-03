@@ -16,7 +16,7 @@ body {
   background-color: #15161b;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding-right: 25px;
   align-items: center;
   gap: 45px;
@@ -28,6 +28,11 @@ body {
   text-decoration: none;
   color: #f5dd02;
 }
+
+.Logo {
+  width: 75px;
+}
+
 #mainDisplay {
   width: 100vw;
 }
@@ -92,6 +97,7 @@ body {
   box-shadow: #15161b;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
   transition: transform 1s ease, box-shadow 1s ease;
+  margin-bottom: 15px;
 }
 .moodImages:hover {
   transform: scale(1.03);
